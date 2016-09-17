@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  language: 1
+  timezone: MyString
+  date_format: MyString
+  email: MyString
+  user: one
+
+two:
+  language: 1
+  timezone: MyString
+  date_format: MyString
+  email: MyString
+  user: two

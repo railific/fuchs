@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Prefs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Language</th>
+      <th>Timezone</th>
+      <th>Date format</th>
+      <th>Email</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prefs.each do |pref| %>
+      <tr>
+        <td><%= pref.language %></td>
+        <td><%= pref.timezone %></td>
+        <td><%= pref.date_format %></td>
+        <td><%= pref.email %></td>
+        <td><%= pref.user_id %></td>
+        <td><%= link_to 'Show', pref %></td>
+        <td><%= link_to 'Edit', edit_pref_path(pref) %></td>
+        <td><%= link_to 'Destroy', pref, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pref', new_pref_path %>
