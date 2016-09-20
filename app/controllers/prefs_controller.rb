@@ -1,4 +1,5 @@
 class PrefsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_pref, only: [:show, :edit, :update, :destroy]
 
   # GET /prefs
